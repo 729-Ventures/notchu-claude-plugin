@@ -1,0 +1,19 @@
+{
+  "name": "notchu",
+  "displayName": "Notchu",
+  "version": "1.0.0",
+  "description": "Shows your Claude Code sessions in the Mac notch with Notchu, and lets you approve or deny permission requests there.",
+  "author": {
+    "name": "729 Ventures"
+  },
+  "homepage": "https://github.com/729-Ventures/notchu-claude-plugin",
+  "repository": "https://github.com/729-Ventures/notchu-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "notchu",
+    "notch",
+    "macos",
+    "approvals",
+    "hooks"
+  ]
+}

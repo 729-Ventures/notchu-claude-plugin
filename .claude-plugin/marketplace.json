@@ -1,0 +1,14 @@
+{
+  "name": "notchu-claude-plugin",
+  "description": "Notchu for Claude Code: sessions and approvals in your Mac's notch.",
+  "owner": {
+    "name": "729 Ventures"
+  },
+  "plugins": [
+    {
+      "name": "notchu",
+      "source": "./",
+      "description": "Shows your Claude Code sessions in the Mac notch with Notchu, and lets you approve or deny permission requests there."
+    }
+  ]
+}

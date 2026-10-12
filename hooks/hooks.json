@@ -1,0 +1,278 @@
+{
+  "description": "Notchu: show Claude Code sessions in the notch and approve or deny permission requests there. Needs the Notchu app running with Live approvals on, and NOTCHU_HOOK_TOKEN set.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 605,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "PermissionDenied": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "http",
+            "url": "http://127.0.0.1:47615/hooks/claude-code",
+            "timeout": 10,
+            "headers": {
+              "Authorization": "Bearer ${NOTCHU_HOOK_TOKEN}",
+              "X-Notchu-Term-Program": "${TERM_PROGRAM}",
+              "X-Notchu-Term-Session-Id": "${TERM_SESSION_ID}",
+              "X-Notchu-Iterm-Session-Id": "${ITERM_SESSION_ID}",
+              "X-Notchu-Tmux": "${TMUX}",
+              "X-Notchu-Tmux-Pane": "${TMUX_PANE}"
+            },
+            "allowedEnvVars": ["NOTCHU_HOOK_TOKEN", "TERM_PROGRAM", "TERM_SESSION_ID", "ITERM_SESSION_ID", "TMUX", "TMUX_PANE"]
+          }
+        ]
+      }
+    ]
+  }
+}
